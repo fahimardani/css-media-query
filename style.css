@@ -1,0 +1,35 @@
+section {
+    margin: auto;
+    width: 90vw;
+    height: 100%;
+  }
+  section > * {
+    padding: 2rem;
+  }
+  header {
+    background: gold;
+    grid-area: header;
+  }
+  aside {
+    background: orange;
+    grid-area: aside;
+  }
+  main {
+    background: pink;
+    grid-area: main;
+  }
+  footer {
+    background: lightblue;
+    grid-area: footer;
+  }
+  @media (min-width: 768px) {
+    section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: 
+      "header header header"
+      "aside main main"
+      "footer footer footer";
+    }
+  }
